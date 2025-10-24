@@ -1,0 +1,45 @@
+running egg_info
+creating ../../build/sim/sim.egg-info
+writing ../../build/sim/sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/sim/sim.egg-info/dependency_links.txt
+writing entry points to ../../build/sim/sim.egg-info/entry_points.txt
+writing requirements to ../../build/sim/sim.egg-info/requires.txt
+writing top-level names to ../../build/sim/sim.egg-info/top_level.txt
+writing manifest file '../../build/sim/sim.egg-info/SOURCES.txt'
+reading manifest file '../../build/sim/sim.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/sim/sim.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/paurush/CSCE752/CSCE752_Project3/build/sim/build
+creating /home/paurush/CSCE752/CSCE752_Project3/build/sim/build/lib
+creating /home/paurush/CSCE752/CSCE752_Project3/build/sim/build/lib/sim
+copying sim/sim1.py -> /home/paurush/CSCE752/CSCE752_Project3/build/sim/build/lib/sim
+copying sim/sim2.py -> /home/paurush/CSCE752/CSCE752_Project3/build/sim/build/lib/sim
+running install
+running install_lib
+creating /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/python3.12/site-packages/sim
+copying /home/paurush/CSCE752/CSCE752_Project3/build/sim/build/lib/sim/sim1.py -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/python3.12/site-packages/sim
+copying /home/paurush/CSCE752/CSCE752_Project3/build/sim/build/lib/sim/sim2.py -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/python3.12/site-packages/sim
+byte-compiling /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/python3.12/site-packages/sim/sim1.py to sim1.cpython-312.pyc
+byte-compiling /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/python3.12/site-packages/sim/sim2.py to sim2.cpython-312.pyc
+running install_data
+creating /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/ament_index
+creating /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/ament_index/resource_index
+creating /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/ament_index/resource_index/packages
+copying resource/sim -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/ament_index/resource_index/packages
+copying share/3.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying share/1.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying share/2.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying share/5.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying share/tamu.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying share/corners.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying share/4.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying share/scatter.targets -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+copying package.xml -> /home/paurush/CSCE752/CSCE752_Project3/install/sim/share/sim
+running install_egg_info
+Copying ../../build/sim/sim.egg-info to /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/python3.12/site-packages/sim-2.0.0-py3.12.egg-info
+running install_scripts
+Installing sim1 script to /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/sim
+Installing sim2 script to /home/paurush/CSCE752/CSCE752_Project3/install/sim/lib/sim
+writing list of installed files to '/home/paurush/CSCE752/CSCE752_Project3/build/sim/install.log'

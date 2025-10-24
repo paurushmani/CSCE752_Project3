@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: sim
+Version: 2.0.0
+Summary: Tiny simluators for CSCE452/752.
+Maintainer: jokane
+Maintainer-email: jokane@tamu.edu
+License: MIT
+License-File: LICENSE
