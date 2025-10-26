@@ -8,6 +8,7 @@ setup.py
 ../build/proj3/proj3.egg-info/requires.txt
 ../build/proj3/proj3.egg-info/top_level.txt
 ../build/proj3/proj3.egg-info/zip-safe
+launch/project3.launch.py
 proj3/__init__.py
 proj3/detector_node.py
 proj3/tracker_node.py

@@ -1,3 +1,0 @@
-[console_scripts]
-sim1 = sim.sim1:main
-sim2 = sim.sim2:main
