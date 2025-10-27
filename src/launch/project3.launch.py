@@ -8,7 +8,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    rviz_path = "/home/paurush/CSCE752/CSCE752_Project3/src/sim_configured.rviz"
+    rviz_path = "/home/maria-visinescu/ros2_ws/src/CSCE752_Project3/src/sim_configured.rviz"
 
     bag_in_arg = DeclareLaunchArgument(
         'bag_in',

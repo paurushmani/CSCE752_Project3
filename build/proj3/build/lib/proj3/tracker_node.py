@@ -15,6 +15,8 @@ class TrackedPerson:
         self.last_seen = 0
         self.confirmed = False  # only publish once confirmed
         self.confirmation_dist = 0.2  # must move this much total to confirm
+        self.min_velocity = 0.02
+        self.max_velocity_jump = 0.2
 
     def update(self, pos):
         self.positions.append(pos)
@@ -27,6 +29,14 @@ class TrackedPerson:
         start = np.array(self.positions[0])
         end = np.array(self.positions[-1])
         return np.linalg.norm(end - start) > self.confirmation_dist
+
+    def has_consistent_motion(self):
+        """Check if the motion flows and is consistent"""
+        if len(self.positions) < 3:
+            return False
+        diffs = np.diff(self.positions, axis=0)
+        norms = np.linalg.norm(diffs, axis=1)
+        return np.mean(norms) > self.min_velocity and np.std(norms) < self.max_velocity_jump
 
 
 class TrackerNode(Node):
@@ -88,7 +98,7 @@ class TrackerNode(Node):
             track.last_seen += 1
 
             # confirm if it moved enough
-            if not track.confirmed and track.has_moved_enough():
+            if not track.confirmed and track.has_moved_enough() and track.has_consistent_motion():
                 track.confirmed = True
                 self.get_logger().info(f"Confirmed moving person {track_id}")
 
