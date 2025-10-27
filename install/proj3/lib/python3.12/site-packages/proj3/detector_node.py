@@ -15,12 +15,12 @@ class DetectorNode(Node):
         self.get_logger().info("Detector node started. Listening to /scan...")
 
         # Parameters
-        self.declare_parameter('cluster_eps', 0.4)   # meters
-        self.declare_parameter('min_points', 5)
-        self.declare_parameter('min_width', 0.2)
-        self.declare_parameter('max_width', 1.0)
-        self.declare_parameter('min_height', 0.2)
-        self.declare_parameter('max_height', 1.0)
+        self.declare_parameter('cluster_eps', 1.0)   # meters
+        self.declare_parameter('min_points', 3)
+        self.declare_parameter('min_width', 0.07)
+        self.declare_parameter('max_width', 2.0)
+        self.declare_parameter('min_height', 0.07)
+        self.declare_parameter('max_height', 2.0)
 
         # Background initialization
         self.background_points = None

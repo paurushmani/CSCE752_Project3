@@ -46,8 +46,8 @@ class TrackerNode(Node):
         self.publisher = self.create_publisher(MarkerArray, '/person_markers', 10)
         self.tracked = {}
         self.next_id = 0
-        self.timeout = 15  # frames before deleting a person
-        self.association_dist = 0.7  # meters
+        self.timeout = 30  # frames before deleting a person
+        self.association_dist = 1.2  # meters
         self.get_logger().info("Tracker node started. Listening to /detected_people...")
 
         # periodic maintenance

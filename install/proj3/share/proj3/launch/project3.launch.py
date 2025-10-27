@@ -8,7 +8,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    rviz_path = "/home/maria-visinescu/ros2_ws/src/CSCE752_Project3/src/sim_configured.rviz"
+    rviz_path = "/home/paurush/CSCE752/CSCE752_Project3/src/sim_configured.rviz"
 
     bag_in_arg = DeclareLaunchArgument(
         'bag_in',
@@ -39,7 +39,7 @@ def generate_launch_description():
 
     # 4. Define bag play and record (no --clock)
     bag_play = ExecuteProcess(
-        cmd=['ros2', 'bag', 'play', bag_in],
+        cmd=['ros2', 'bag', 'play', bag_in, '--rate', '2.0'],
         output='screen'
     )
 
