@@ -2,10 +2,10 @@ rosbag2_bagfile_information:
   version: 9
   storage_identifier: mcap
   duration:
-    nanoseconds: 37054635593
+    nanoseconds: 6429145366
   starting_time:
-    nanoseconds_since_epoch: 1761605158192320738
-  message_count: 865
+    nanoseconds_since_epoch: 1761609947333090260
+  message_count: 179
   topics_with_message_count:
     - topic_metadata:
         name: /initialpose
@@ -94,7 +94,7 @@ rosbag2_bagfile_information:
               nsec: 854775807
             avoid_ros_namespace_conventions: false
         type_description_hash: RIHS01_0599f6f85b4bfca379873a0b4375a0aca022156bd2d7021275d116ed1fa8bfe0
-      message_count: 227
+      message_count: 44
     - topic_metadata:
         name: /scan
         type: sensor_msgs/msg/LaserScan
@@ -116,7 +116,7 @@ rosbag2_bagfile_information:
               nsec: 854775807
             avoid_ros_namespace_conventions: false
         type_description_hash: RIHS01_64c191398013af96509d518dac71d5164f9382553fce5c1f8cca5be7924bd828
-      message_count: 371
+      message_count: 63
     - topic_metadata:
         name: /parameter_events
         type: rcl_interfaces/msg/ParameterEvent
@@ -153,7 +153,7 @@ rosbag2_bagfile_information:
               nsec: 854775807
             avoid_ros_namespace_conventions: false
         type_description_hash: RIHS01_043e627780fcad87a22d225bc2a037361dba713fca6a6b9f4b869a5aa0393204
-      message_count: 7
+      message_count: 1
     - topic_metadata:
         name: /events/read_split
         type: rosbag2_interfaces/msg/ReadSplitEvent
@@ -219,7 +219,7 @@ rosbag2_bagfile_information:
               nsec: 854775807
             avoid_ros_namespace_conventions: false
         type_description_hash: RIHS01_86cb8800b6fb05b5eff1abd7a56f62a5641d3ae9a1c29e78e67e704f1d067dcf
-      message_count: 227
+      message_count: 44
     - topic_metadata:
         name: /rosout
         type: rcl_interfaces/msg/Log
@@ -241,17 +241,17 @@ rosbag2_bagfile_information:
               nsec: 854775807
             avoid_ros_namespace_conventions: false
         type_description_hash: RIHS01_e28ce254ca8abc06abf92773b74602cdbf116ed34fbaf294fb9f81da9f318eac
-      message_count: 33
+      message_count: 27
   compression_format: ""
   compression_mode: ""
   relative_file_paths:
-    - out_0.mcap
+    - 08-06_0.mcap
   files:
-    - path: out_0.mcap
+    - path: 08-06_0.mcap
       starting_time:
-        nanoseconds_since_epoch: 1761605158192320738
+        nanoseconds_since_epoch: 1761609947333090260
       duration:
-        nanoseconds: 37054635593
-      message_count: 865
+        nanoseconds: 6429145366
+      message_count: 179
   custom_data: ~
   ros_distro: jazzy

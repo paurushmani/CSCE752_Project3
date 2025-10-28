@@ -8,7 +8,12 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    rviz_path = "/home/paurush/CSCE752/CSCE752_Project3/src/sim_configured.rviz"
+    # rviz_path = "/home/paurush/CSCE752/CSCE752_Project3/src/sim_configured.rviz"
+
+    rviz_path_arg = DeclareLaunchArgument(
+        'rviz_path',
+        description='Full path to the rviz conf.'
+    )
 
     bag_in_arg = DeclareLaunchArgument(
         'bag_in',
@@ -21,6 +26,7 @@ def generate_launch_description():
     )
 
     # 2. Get argument values
+    rviz_path = LaunchConfiguration('rviz_path')
     bag_in = LaunchConfiguration('bag_in')
     bag_out = LaunchConfiguration('bag_out')
 
@@ -39,7 +45,7 @@ def generate_launch_description():
 
     # 4. Define bag play and record (no --clock)
     bag_play = ExecuteProcess(
-        cmd=['ros2', 'bag', 'play', bag_in, '--rate', '2.0'],
+        cmd=['ros2', 'bag', 'play', bag_in, '--rate', '1.0'],
         output='screen'
     )
 
@@ -72,6 +78,7 @@ def generate_launch_description():
 
     # 8. Return the launch description
     return LaunchDescription([
+        rviz_path_arg,
         bag_in_arg,
         bag_out_arg,
         
