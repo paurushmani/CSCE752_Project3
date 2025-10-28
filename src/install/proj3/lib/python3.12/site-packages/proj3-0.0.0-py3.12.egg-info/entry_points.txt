@@ -1,0 +1,3 @@
+[console_scripts]
+detector_node = proj3.detector_node:main
+tracker_node = proj3.tracker_node:main

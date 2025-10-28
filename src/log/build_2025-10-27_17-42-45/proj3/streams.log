@@ -1,0 +1,43 @@
+[0.994s] Invoking command in '/home/paurush/CSCE752/CSCE752_Project3/src': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/proj3 build --build-base /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build install --record /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/install.log --single-version-externally-managed install_data
+[1.457s] running egg_info
+[1.458s] creating build/proj3/proj3.egg-info
+[1.484s] writing build/proj3/proj3.egg-info/PKG-INFO
+[1.484s] writing dependency_links to build/proj3/proj3.egg-info/dependency_links.txt
+[1.485s] writing entry points to build/proj3/proj3.egg-info/entry_points.txt
+[1.485s] writing requirements to build/proj3/proj3.egg-info/requires.txt
+[1.485s] writing top-level names to build/proj3/proj3.egg-info/top_level.txt
+[1.485s] writing manifest file 'build/proj3/proj3.egg-info/SOURCES.txt'
+[1.537s] reading manifest file 'build/proj3/proj3.egg-info/SOURCES.txt'
+[1.538s] writing manifest file 'build/proj3/proj3.egg-info/SOURCES.txt'
+[1.538s] running build
+[1.538s] running build_py
+[1.538s] creating /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build
+[1.538s] creating /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib
+[1.538s] creating /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib/proj3
+[1.539s] copying proj3/__init__.py -> /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib/proj3
+[1.539s] copying proj3/tracker_node.py -> /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib/proj3
+[1.539s] copying proj3/detector_node.py -> /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib/proj3
+[1.539s] running install
+[1.547s] running install_lib
+[1.575s] creating /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3
+[1.575s] copying /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib/proj3/__init__.py -> /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3
+[1.576s] copying /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib/proj3/tracker_node.py -> /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3
+[1.576s] copying /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build/lib/proj3/detector_node.py -> /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3
+[1.576s] byte-compiling /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3/__init__.py to __init__.cpython-312.pyc
+[1.577s] byte-compiling /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3/tracker_node.py to tracker_node.cpython-312.pyc
+[1.578s] byte-compiling /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3/detector_node.py to detector_node.cpython-312.pyc
+[1.580s] running install_data
+[1.580s] creating /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/share/ament_index
+[1.580s] creating /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/share/ament_index/resource_index
+[1.580s] creating /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/share/ament_index/resource_index/packages
+[1.581s] copying resource/proj3 -> /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/share/ament_index/resource_index/packages
+[1.581s] copying package.xml -> /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/share/proj3
+[1.581s] creating /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/share/proj3/launch
+[1.581s] copying launch/project3.launch.py -> /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/share/proj3/launch
+[1.581s] running install_egg_info
+[1.612s] Copying build/proj3/proj3.egg-info to /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages/proj3-0.0.0-py3.12.egg-info
+[1.613s] running install_scripts
+[1.785s] Installing detector_node script to /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/proj3
+[1.785s] Installing tracker_node script to /home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/proj3
+[1.785s] writing list of installed files to '/home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/install.log'
+[1.813s] Invoked command in '/home/paurush/CSCE752/CSCE752_Project3/src' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paurush/CSCE752/CSCE752_Project3/src/install/proj3/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/proj3 build --build-base /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/build install --record /home/paurush/CSCE752/CSCE752_Project3/src/build/proj3/install.log --single-version-externally-managed install_data

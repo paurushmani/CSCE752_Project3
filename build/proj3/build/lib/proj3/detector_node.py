@@ -15,8 +15,17 @@ class DetectorNode(Node):
         self.get_logger().info("Detector node started. Listening to /scan...")
 
         # Parameters
-        self.declare_parameter('cluster_eps', 0.4)   # meters
-        self.declare_parameter('min_points', 5)
+        self.declare_parameter('cluster_eps', 1.0)   # meters
+        self.declare_parameter('min_points', 3)
+        self.declare_parameter('min_width', 0.07)
+        self.declare_parameter('max_width', 2.0)
+        self.declare_parameter('min_height', 0.07)
+        self.declare_parameter('max_height', 2.0)
+
+        # Background initialization
+        self.background_points = None
+        self.bg_frames = 5
+        self.bg_data = []
 
     def scan_callback(self, scan):
         # Convert to (x,y)
@@ -28,20 +37,43 @@ class DetectorNode(Node):
         points = np.vstack((xs, ys)).T
         print(points)
 
+        # Build static background from first couple of frames
+        if self.background_points is None:
+            self.bg_data.append(points)
+            if len(self.bg_data) >= self.bg_frames:
+                self.background_points = np.vstack(self.bg_data)
+            return
+
+        # Remove static background points
+        dists = np.min(np.linalg.norm(points[:, None, :] - self.background_points[None, :, :], axis=2), axis=1)
+        points = points[dists > 0.05]
+
+        if len(points) == 0:
+            return
+
         # Cluster points
         eps = self.get_parameter('cluster_eps').value
         min_samples = self.get_parameter('min_points').value
         clustering = DBSCAN(eps=eps, min_samples=min_samples).fit(points)
         labels = clustering.labels_
 
+        min_width = self.get_parameter('min_width').value
+        max_width = self.get_parameter('max_width').value
+        min_height = self.get_parameter('min_height').value
+        max_height= self.get_parameter('max_height').value
+
         centroids = []
         for lbl in set(labels):
             if lbl == -1:
                 continue  # noise
             cluster = points[labels == lbl]
-            if len(cluster) > 0:
-                centroid = np.mean(cluster, axis=0)
-                centroids.append(centroid)
+            width = cluster[:,0].max() - cluster[:,0].min()
+            height = cluster[:,1].max() - cluster[:,1].min()
+            # Don't count any clusters that are not the right size
+            if not (min_width <= width <= max_width and min_height <= height <= max_height):
+                continue
+            centroid = np.mean(cluster, axis=0)
+            centroids.append(centroid)
 
         # Publish
         msg = Float32MultiArray()
